@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter index</title>
+</head>
+<body>
+    <div class="container">
+        <h2>visit count: {{visit_counter}}</h2>
+
+        <h2>Counter: {{counter}}</h2>
+
+        <form action="increment2" method="POST">
+            {% csrf_token%}
+            <button>+2</button>
+
+        </form>
+
+        <form action="increment_value" method="POST">
+            {% csrf_token %}
+            <label for="increment_value">custom Increment</label>
+            <input type="number" name="increment_value">
+            <button>Enter</button>
+
+        </form>
+
+        <a href="destroy_session">Reset Counter</a>
+
+
+        <form>
+
+        </form>
+
+
+    </div>
+    
+</body>
+</html>
